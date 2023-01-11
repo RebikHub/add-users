@@ -7,7 +7,7 @@ export default function ListUsers() {
   const [error, setError] = useState<any>('');
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch(`${process.env.REACT_APP_URL}users`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`Ошибка - ${res.status}`);

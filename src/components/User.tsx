@@ -16,10 +16,10 @@ export default function User({item}: Props) {
         {item.email}
       </p>
       <p>
-        {item.phone}
+        {item.age}
       </p>
       <p>
-        {item.website}
+        {item.country}
       </p>
     </UserLi>
   );
