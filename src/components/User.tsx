@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { IUser } from '../interfaces/interfaces';
-import { UserLi } from '../styles/styles';
+import { Button } from '../styles/styles';
+import { Context } from './App';
 
 type Props = {
   item: IUser
 };
 
 export default function User({item}: Props) {
+  const context = useContext(Context);
+
   return (
-    <UserLi>
-      <p>
+    <tr>
+      <td>
         {item.username}
-      </p>
-      <p>
+      </td>
+      <td>
         {item.email}
-      </p>
-      <p>
+      </td>
+      <td>
         {item.age}
-      </p>
-      <p>
+      </td>
+      <td>
         {item.country}
-      </p>
-    </UserLi>
+      </td>
+      <td>
+        <Button onClick={() => context?.editUserId(item.id!)}>Edit</Button>
+        <Button onClick={() => context?.removeUser(item.id!)}>Remove</Button>
+      </td>
+    </tr>
   );
 };
