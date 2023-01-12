@@ -12,7 +12,7 @@ export default function UserForm({item}: Props) {
   const [user, setUser] = useState<IUser>({
     username: '',
     email: '',
-    age: 0,
+    age: '',
     country: '',
   });
   const [error, setError] = useState<string>('');
@@ -43,7 +43,7 @@ export default function UserForm({item}: Props) {
         setUser({
           username: '',
           email: '',
-          age: 0,
+          age: '',
           country: '',
         });
     } else {
@@ -66,7 +66,7 @@ export default function UserForm({item}: Props) {
         onChange={(e) => setUser({...user, email: e.target.value})}/>
       <Input type="number" placeholder='Age'
         value={user.age}
-        onChange={(e) => setUser({...user, age: Number(e.target.value)})}/>
+        onChange={(e) => setUser({...user, age: e.target.value})}/>
       <Input type="text" placeholder='Country'
         value={user.country}
         onFocus={() => setHidden(true)}

@@ -46,7 +46,7 @@ export default function ListUsers() {
         }))
       break;
       case 'Age':
-        setUsers((prev) => prev.sort((a, b) => a.age - b.age))
+        setUsers((prev) => prev.sort((a, b) => +a.age - +b.age))
       break;
       case 'Country':
         setUsers((prev) => prev.sort((a, b) => {
