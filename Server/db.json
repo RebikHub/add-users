@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "age": "23",
+      "country": "Belgium"
+    },
+    {
+      "id": 2,
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "age": "25",
+      "country": "Ireland"
+    },
+    {
+      "id": 3,
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "age": "33",
+      "country": "Norway"
+    },
+    {
+      "id": 4,
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "age": "19",
+      "country": "Sweden"
+    },
+    {
+      "id": 5,
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "age": "42",
+      "country": "Canada"
+    },
+    {
+      "username": "asd",
+      "email": "asd",
+      "age": "2",
+      "country": "AndorrA",
+      "id": "mu7x9wYkf58RodSxG64HK"
+    }
+  ]
+}
