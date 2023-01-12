@@ -2,12 +2,12 @@
 
 Развернуть проект можно командой:
 
-npm i
-npm run start
+- npm i
+- npm run start
 
 Развернуть JSON-server можно перейдя в папку ./server командой:
 
-npm i
-npm run start
+- npm i
+- npm run start
 
 Сервер запуститься по адресу http://localhost:4000
