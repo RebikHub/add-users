@@ -16,7 +16,7 @@ export default function ListUsers() {
 
   function sorting(ev: BaseSyntheticEvent) {
     const collator = new Intl.Collator('en');  
-    const name = ev.currentTarget.outerText.toLocaleLowerCase() as keyof IUser;
+    const name = ev.currentTarget.outerText.toLowerCase() as keyof IUser;
     if (name === 'age') {
       setUsers((prev) => [...prev.sort((a, b) => +a[name] - +b[name])]);
     } else if (name === 'username' || name === 'email' || name === 'country') {
