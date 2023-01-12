@@ -15,20 +15,12 @@ export default function ListUsers() {
   }, [list]);
 
   function sorting(ev: BaseSyntheticEvent) {
-    const collator = new Intl.Collator('en');   
-    switch (ev.currentTarget.outerText) {
-      case 'Username':
-        setUsers((prev) => [...prev.sort((a, b) => collator.compare(a.username, b.username))]);
-      break;
-      case 'Email':
-        setUsers((prev) => [...prev.sort((a, b) => collator.compare(a.email, b.email))]);
-      break;
-      case 'Age':
-        setUsers((prev) => [...prev.sort((a, b) => +a.age - +b.age)]);
-      break;
-      case 'Country':
-        setUsers((prev) => [...prev.sort((a, b) => collator.compare(a.country, b.country))]);
-      break;
+    const collator = new Intl.Collator('en');  
+    const name = ev.currentTarget.outerText.toLocaleLowerCase() as keyof IUser;
+    if (name === 'age') {
+      setUsers((prev) => [...prev.sort((a, b) => +a[name] - +b[name])]);
+    } else if (name === 'username' || name === 'email' || name === 'country') {
+      setUsers((prev) => [...prev.sort((a, b) => collator.compare(a[name], b[name]))]);
     };
   };
 
