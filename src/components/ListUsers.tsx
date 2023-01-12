@@ -16,10 +16,10 @@ export default function ListUsers() {
 
   function sorting(ev: BaseSyntheticEvent) {
     const collator = new Intl.Collator('en');  
-    const name = ev.currentTarget.outerText.toLowerCase() as keyof IUser;
+    const name: 'age' | 'username' |'email' | 'country' = ev.currentTarget.outerText.toLowerCase();
     if (name === 'age') {
       setUsers((prev) => [...prev.sort((a, b) => +a[name] - +b[name])]);
-    } else if (name === 'username' || name === 'email' || name === 'country') {
+    } else {
       setUsers((prev) => [...prev.sort((a, b) => collator.compare(a[name], b[name]))]);
     };
   };
